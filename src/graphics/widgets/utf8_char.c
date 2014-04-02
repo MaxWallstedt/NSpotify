@@ -134,8 +134,7 @@ unsigned char utf8_char_nbytes(utf8_char *this)
 		return 6;
 	} else if (!(this->s[0] & 0x01)) {
 		return 7;
-	} else {
-		/* this->s[0] == 0xFF */
+	} else { /* this->s[0] == 0xFF */
 		unsigned char len = 0, i;
 
 		for (i = 0; this->s[i]; ++i) {
